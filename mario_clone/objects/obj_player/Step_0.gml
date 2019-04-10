@@ -8,12 +8,19 @@ switch(state)
        lastState = "IDLE"; 
 	   sprite_index = spr_player_idle; 
 	   //image_speed = 1; 
-	   //Check Inputs
 	   
-	   if(input.up) state = "JUMPING";
+	   
+	   hSpeed = lerp(hSpeed, 0, acc*1.5); 
+	   if(hSpeed < 0.09) && (hSpeed > -0.09)
+	   {
+	       hSpeed = 0; 
+	   }	   
+	   
+	   //check inputs
+	   if(input.up) && (vSpeed == 0)  state = "JUMPING_INIT";
 	   if(input.right) state = "RIGHT";
 	   if(input.left) state = "LEFT";
-	  // allowPlayerMovement();
+	  
 	      break;   
    }	   
    case("RIGHT"):
@@ -27,7 +34,7 @@ switch(state)
 	   image_speed = (abs(hSpeed)/maxSpeed) * animationSpeed;
 	   
 	   //Check inputs
-	   if(input.up) state = "JUMPING";
+	   if(input.up) && (vSpeed == 0)  state = "JUMPING_INIT";
 	   if(input.left) state = "LEFT";
 	   if(hSpeed = 0) state = "IDLE"; 
 	      break;   	  
@@ -46,31 +53,39 @@ switch(state)
 	   image_speed = (abs(hSpeed)/maxSpeed) * animationSpeed;
 	   
 	   //Check inputs
-	   if(input.up) state = "JUMPING";
+	   if(input.up) && (vSpeed == 0)  state = "JUMPING_INIT";
 	   if(input.right) state = "RIGHT";
 	   if(hSpeed = 0) state = "IDLE"; 
 	   	  
 	      break;   
    }
+   case("JUMPING_INIT"):
+   {
+	    sprite_index = spr_player_jump;
+		//sprite_index = spr_player_idle; 
+		image_speed = (abs(vSpeed)/maxSpeed) * animationSpeed;
+	    
+		vSpeed = -jumpSpeed; 
+		state = "JUMPING"; 
+	   break;   
+   }   
    case("JUMPING"):
    { 
         
-        sprite_index = spr_player_jump;
-		//sprite_index = spr_player_idle; 
-		image_speed = (abs(vSpeed)/maxSpeed) * animationSpeed;
+        if(vSpeed < 0) && (!input.up_held) vSpeed = max(vSpeed, -jumpSpeed/2);
 		allowPlayerMovement();
-		if(input.up)
+		
+		if(vSpeed == 0)
 		{
-		   jumpTime ++; 
-		   if(jumpTime < 8) vSpeed = -jumpSpeed;
-		}		
-		else jumpTime = 20; 
-		if(place_meeting(x ,y+1, obj_wall)) 
+			if(place_meeting(x, y+1, obj_wall)) state = lastState; 
+		}	
+		else
 		{
-		   jumpTime = 0;
-		   state = lastState;
-		}
-	      break;   
+			if(place_meeting(x, y+vSpeed, obj_wall)) state = lastState;
+			
+		}	
+		break; 
+		
    }	 
    
 }	
@@ -79,9 +94,10 @@ switch(state)
 //Gravity
 if(vSpeed < 5) vSpeed += grav; 
 
-//Collisions
-collisionsAndMoving(obj_wall);
 
+
+
+collisionsAndMoving(obj_wall);
 
 
 

@@ -6,9 +6,9 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 19,
+    "bbox_bottom": 21,
     "bbox_left": 0,
-    "bbox_right": 19,
+    "bbox_right": 21,
     "bbox_top": 0,
     "bboxmode": 1,
     "colkind": 1,
@@ -16,45 +16,67 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "99587956-f3bd-43e6-9116-3269930f6894",
+            "id": "2c08e7a7-d649-47af-a6d8-73c4f86480f8",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "b387eec1-fa8e-412f-b807-aa0c0f1b264a",
             "compositeImage": {
-                "id": "c8e425ca-e4fc-49b6-9aa6-bab69068566b",
+                "id": "ccefdee6-af58-471a-a071-8f0328a7cb37",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "99587956-f3bd-43e6-9116-3269930f6894",
+                "FrameId": "2c08e7a7-d649-47af-a6d8-73c4f86480f8",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "7c2b9635-3a98-4b0e-8470-6b36abd7f3c7",
+                    "id": "883b5ba8-78cd-4524-b2fd-35c6babbcb97",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "99587956-f3bd-43e6-9116-3269930f6894",
+                    "FrameId": "2c08e7a7-d649-47af-a6d8-73c4f86480f8",
                     "LayerId": "7e38bc8c-7e40-4a65-9b7c-2f702b5e1396"
                 }
             ]
         },
         {
-            "id": "a9ac075d-288f-466d-9621-c570ea4407f6",
+            "id": "0b6ccd57-75eb-4c90-b535-90e70142f6e0",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "b387eec1-fa8e-412f-b807-aa0c0f1b264a",
             "compositeImage": {
-                "id": "9f4185cc-a509-4151-9c0e-023a6e9b7e4e",
+                "id": "5562d2aa-1d27-4eb1-85b7-ff88a9dd6b06",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "a9ac075d-288f-466d-9621-c570ea4407f6",
+                "FrameId": "0b6ccd57-75eb-4c90-b535-90e70142f6e0",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "3ab1216d-ccb1-48a6-90f3-3e11e0e4d63b",
+                    "id": "f4d72576-ff84-496f-8131-48bfeef403fa",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "a9ac075d-288f-466d-9621-c570ea4407f6",
+                    "FrameId": "0b6ccd57-75eb-4c90-b535-90e70142f6e0",
+                    "LayerId": "7e38bc8c-7e40-4a65-9b7c-2f702b5e1396"
+                }
+            ]
+        },
+        {
+            "id": "643ccb4f-bfd1-4bf0-8a5a-72d4536426b4",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "b387eec1-fa8e-412f-b807-aa0c0f1b264a",
+            "compositeImage": {
+                "id": "8693a27d-0d53-4036-96f5-3154e946f8e0",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "643ccb4f-bfd1-4bf0-8a5a-72d4536426b4",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "57d491e4-cff4-42a5-8840-f4cd317eb5e0",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "643ccb4f-bfd1-4bf0-8a5a-72d4536426b4",
                     "LayerId": "7e38bc8c-7e40-4a65-9b7c-2f702b5e1396"
                 }
             ]
@@ -62,7 +84,7 @@
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 20,
+    "height": 22,
     "layers": [
         {
             "id": "7e38bc8c-7e40-4a65-9b7c-2f702b5e1396",
@@ -78,15 +100,15 @@
     ],
     "origin": 4,
     "originLocked": false,
-    "playbackSpeed": 1,
-    "playbackSpeedType": 1,
+    "playbackSpeed": 40,
+    "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
-    "width": 20,
-    "xorig": 10,
-    "yorig": 10
+    "width": 22,
+    "xorig": 11,
+    "yorig": 11
 }
